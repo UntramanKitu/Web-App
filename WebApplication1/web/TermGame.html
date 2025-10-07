@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TermGame EiEi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                 background:darkcyan;
+                 margin: 0;
+                 padding: 0;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #333333;
+                display: flex;
+                text-align: center;
+            }
+
+             ul li a {
+                display: block;
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+             }
+
+                ul li a:hover {
+                background-color: #111111;
+            }
+            .btn-link {
+                font-size: 50px;
+                padding: 10px 20px;
+                background: darkblue;
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+               }
+
+             .btn-link:hover {
+                 background: navy;
+               }
+                .center {
+                display: flex;
+                justify-content: center;  
+                align-items: center;     
+                height: 50vh;           
+                }
+                fieldset {
+                    border: 2px solid black;
+                    width: fit-content;
+                    padding: 15px;
+                    display: flex;      
+                    gap: 20px;           
+                    flex-wrap: wrap;    
+                 }
+                label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                img {
+                    border-radius: 5px;
+                }
+              
+        </style>
+         
+    </head>
+    <body>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="TermGame.html">เติมเกมมมมมมม</a></li>
+                <li><a href="RetrieveAllgame ">โชว์ข้อมูลการเติมเกมส์</a></li>
+            </ul>
+       <form action="AddNewGameMySQL" method="post">
+    <fieldset>
+        <legend>เลือกเกมที่ต้องการ</legend>
+        <label><input type="radio" name="game" value="FreeFire"> 
+         FreeFire<img src="img/freefire.jpg" alt="FreeFire" width="50" height="50"></label><br>
+        <label><input type="radio" name="game" value="PubG"> 
+        PubG Mobile<img src="img/pubg.jpg" alt="PubG Mobile" width="50" height="50"></label><br>
+        <label><input type="radio" name="game" value="Valorant"> 
+        Valorant<img src="img/valo.jpg" alt="Valorant" width="50" height="50"></label><br>
+        <label><input type="radio" name="game" value="Ragnarok"> 
+        Ragnarok<img src="img/rang.jpg" alt="Ragnarok" width="50" height="50"></label><br>
+        <label><input type="radio" name="game" value="BloodStrike"> 
+        BloodStrike<img src="img/blood.jpg" alt="BloodStrike" width="50" height="50"></label><br>
+    </fieldset><br>
+
+    UID : <input type="text" name="game_id" placeholder="กรอกหมายเลข UID "><br>
+    เลือกราคาเกมที่ต้องการ :  <input type="text" name="game_price" placeholder="กรอกราคาที่ต้องการ (ขั้นต่ำ 20 บาท) "><br>
+    
+    <label for="bank">ช่องทางการชำระเงิน : </label>
+    <select id="bank" name="bank">
+        <option value="Prompay QRcode">Prompay QRcode</option>
+        <option value="True Money">True Money</option>
+        <option value="Krungsri Bank">Krungsri Bank</option>
+        <option value="Krungthai Bank">Krungthai Bank</option>
+        <option value="Kasrikorn Bank">Kasrikorn Bank</option>
+    </select>
+    <div class="center">
+        <input type="submit" value="เติมเงิน">
+    </div>
+</form>
+
+    </body>
+</html>
